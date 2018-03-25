@@ -190,8 +190,10 @@ function pushNotification(data) {
         if (test) {
             createPushRequest(title, content, 'https://onesignal.com/api/v1/notifications', "482b9bc7-68a6-4e85-a6bd-54f65618b3bf", 'Basic MDIyZTZmNTYtYjY5NS00M2QzLWEzZDAtZTRmOGM4ZGJjYTE3');
         }
-        else
+        else {
+            createPushRequest(title, content, 'https://onesignal.com/api/v1/notifications', "482b9bc7-68a6-4e85-a6bd-54f65618b3bf", 'Basic MDIyZTZmNTYtYjY5NS00M2QzLWEzZDAtZTRmOGM4ZGJjYTE3'); // Bithonist
             createPushRequest(title, content, 'https://onesignal.com/api/v1/notifications', "499991f6-6f3e-11e5-9fa4-5f5114545e30", 'Basic NDk5OTkyNzgtNmYzZS0xMWU1LTlmYTUtOGY5MzEyOTJhZTI0'); //MissileAlert
+        }
     }
 }
 
