@@ -15,7 +15,7 @@
     "firebase-admin": "^5.4.0",
     "jade": "~1.11.0",
     "mongodb": "^2.2.25",
-    "mongoose": "^4.9.1",
+    "mongoose": "^4.13.8",
     "morgan": "~1.7.0",
     "node-schedule": "latest",
     "request": "^2.81.0",

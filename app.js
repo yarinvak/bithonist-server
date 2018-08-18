@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/news');
 var comments = require('./routes/comments');
-var alerts = require('./routes/alertsInfo');
+var alerts = require('./routes/alert');
 
 var app = express();
 
@@ -38,9 +38,7 @@ const logger = new Logger({
 var request = require('request');
 
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://bithonist:Graph!bob5@bithonist-shard-00-00-u9rxn.mongodb.net:27017," +
-    "bithonist-shard-00-01-u9rxn.mongodb.net:27017,bithonist-shard-00-02-u9rxn.mongodb.net:27017/bithoDB" +
-    "?ssl=true&replicaSet=bithonist-shard-0&authSource=admin");
+mongoose.connect("mongodb://admin:Graph!bob5@cluster0-shard-00-00-kfpgd.mongodb.net:27017,cluster0-shard-00-01-kfpgd.mongodb.net:27017,cluster0-shard-00-02-kfpgd.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin");
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
