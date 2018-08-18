@@ -6,8 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/news');
-var comments = require('./routes/comments');
 var alerts = require('./routes/alert');
 
 var app = express();
@@ -56,8 +54,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
-app.use('/comments', comments);
 app.use('/alerts', alerts);
 
 // catch 404 and forward to error handler
@@ -77,8 +73,8 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
-app.listen(8002, function () {
-    logger.info('Example app listening on port 8002!')
+app.listen(8003, function () {
+    logger.info('Example app listening on port 8003!')
 });
 
 var http = require('http');
